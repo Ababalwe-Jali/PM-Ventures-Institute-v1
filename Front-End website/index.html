@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PM Ventures Institute — FloLabs Innovations Group</title>
+<meta name="description" content="PM Ventures Institute brings product management and venture thinking together within the FloLabs Ventures Institute family." />
+<meta name="theme-color" content="#0a0a0a" />
+<meta property="og:title" content="PM Ventures Institute — FloLabs Innovations Group" />
+<meta property="og:description" content="PM Ventures Institute brings product management and venture thinking together within the FloLabs Ventures Institute family." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/og-placeholder.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/style.css" />
+
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-live="polite">
+  <div class="loader-brand">
+    <img src="assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="PM Ventures Institute" width="30" height="30">
+    PM Ventures Institute
+  </div>
+  <p class="loader-tag">Where product management meets venture thinking.</p>
+  <div class="loader-progress">
+    <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+    <div class="loader-meta"><span>Loading</span><span class="loader-count" id="loaderCount">000</span></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="shell header-inner">
+    <button class="brand" id="brandBtn" aria-label="PM Ventures Institute — Home">
+      <img src="assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="PM Ventures Institute" width="20" height="20">
+      PM Ventures Institute
+    </button>
+    <nav class="nav-primary" aria-label="Primary">
+      <button data-scroll="about">About</button>
+      <button data-scroll="projects">Projects</button>
+      <button data-scroll="journey">Journey</button>
+    </nav>
+    <div class="header-right">
+      <div class="clock-chip" aria-hidden="true">
+        <span class="clock-label">Local time</span>
+        <span class="clock-time" id="clockTime">—:—</span>
+        <span class="clock-sep">•</span>
+        <span id="clockDate">—</span>
+      </div>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+      <a class="cta-internships" id="headerInternships" href="https://www.flolabs.international/internships" target="_blank" data-external-destination="pending">Internships</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span class="menu-label">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- NAVBAR MENU -->
+<aside class="navmenu" id="navMenu" aria-hidden="true" aria-label="Secondary navigation">
+  <nav class="navmenu-list" aria-label="Secondary">
+    <button class="navmenu-item" type="button" data-scroll="audience"><span class="navmenu-item-label">Who This Is For</span><span class="navmenu-arrow" aria-hidden="true">&rarr;</span></button>
+    <button class="navmenu-item" type="button" data-scroll="network"><span class="navmenu-item-label">Ventures Institute Network</span><span class="navmenu-arrow" aria-hidden="true">&rarr;</span></button>
+    <a class="navmenu-item" id="menuInternships" href="https://www.flolabs.international/internships" target="_blank" rel="noopener noreferrer"><span class="navmenu-item-label">Explore Internships</span><span class="navmenu-arrow" aria-hidden="true">&nearr;</span></a>
+    <a class="navmenu-item" href="https://www.flolabsinnovations.com" target="_blank" rel="noopener noreferrer"><span class="navmenu-item-label">FloLabs Innovations Group</span><span class="navmenu-arrow" aria-hidden="true">&nearr;</span></a>
+  </nav>
+</aside>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="liquidReveal">
+      <img src="./Assets/hero-bg.webp" alt="" width="1920" height="1080" fetchpriority="high" id="heroBaseImg">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="hero-vignette"></div>
+    <div class="hero-watermark">PM VENTURES</div>
+    <div class="shell hero-content">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">PM Ventures Institute</div>
+        <h1 class="hero-h1">
+          <span class="line"><span>Where product</span></span>
+          <span class="line"><span>management meets</span></span>
+          <span class="line"><span>venture thinking.</span></span>
+        </h1>
+        <div class="hero-context">Product Management × Venture Thinking</div>
+        <div class="hero-ctas">
+          <button class="btn-primary" data-scroll="about">Explore PM Ventures</button>
+          <a class="btn-secondary" id="heroInternships" href="#" data-external-destination="pending">Explore Internships</a>
+        </div>
+      </div>
+      <div class="hero-card-wrap">
+        <div class="hero-card" id="heroCard">
+          <div class="hero-card-icon">
+            <img src="assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="" width="24" height="24">
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-card-cap" id="cardCap">PM Ventures</div>
+            <div class="hero-card-title" id="cardTitle">Product management meets venture thinking.</div>
+            <div class="hero-card-nav">
+              <div class="hero-card-dots" id="cardDots"><span class="active"></span><span></span><span></span></div>
+              <button class="hero-card-btn" id="cardPrev" aria-label="Previous">←</button>
+              <button class="hero-card-btn" id="cardNext" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shell">
+      <div class="hero-partners">
+        <div class="hero-partners-label">Explore PM Ventures</div>
+        <div class="hero-partners-grid">
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 2.75c2.6 2.3 4 5.8 4 9.25s-1.4 6.95-4 9.25c-2.6-2.3-4-5.8-4-9.25s1.4-6.95 4-9.25zM2.75 12h18.5"/></svg>About</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Projects</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.9l-5.8 3.05 1.1-6.46-4.69-4.58 6.49-.94L12 2.5z"/></svg>Journey</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Internships</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>Product</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M8 7h9v9"/></svg>Venture</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.5l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.9l-5.8 3.05 1.1-6.46-4.69-4.58 6.49-.94L12 2.5z"/></svg>FloLabs</div>
+          <div class="partner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Institute</div>
+        </div>
+      </div>
+      <div class="hero-status">
+        <span>PM Ventures Institute</span>
+        <span>FloLabs Innovations Group</span>
+        <span>Scroll to explore ↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="shell about-grid">
+      <div>
+        <div class="about-visual">
+          <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg>
+        </div>
+        <p class="about-side">Part of the FloLabs Ventures Institute family.</p>
+      </div>
+      <div>
+        <div class="section-eyebrow">About</div>
+        <h2 class="section-h2 about-statement" id="aboutStatement">PM Ventures Institute brings <em>product management and venture thinking</em> into one focused institute experience.</h2>
+        <div class="about-utility">
+          <div>
+            <div style="font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:.6rem">Explore</div>
+            <div class="about-chips">
+              <span class="chip">FloLabs</span>
+              <span class="chip">Product</span>
+              <span class="chip">Venture</span>
+            </div>
+          </div>
+          <button class="about-cta" data-scroll="about">About PM Ventures</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATE BAND -->
+  <div class="shell create-band" aria-hidden="true">
+    <div class="pill pill-light">Product</div>
+    <div class="pill pill-accent">Meets</div>
+    <div class="pill pill-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <div class="pill pill-ghost">Venture</div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="shell">
+      <div class="projects-header">
+        <div class="projects-header-title">
+          <div class="section-eyebrow">Projects</div>
+          <h2 class="section-h2">Explore what PM Ventures <br>is building and Has to offer</h2>
+        </div>
+        <div class="projects-header-copy">
+          <p class="projects-support">Project section supporting content will be added here once the PM Ventures-specific information is confirmed.</p>
+          <button class="about-cta" data-scroll="about">See More Projects</button>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <div>
+            <div class="project-meta"><span class="project-cat">Project</span><span class="project-year">—</span></div>
+            <h3 class="project-title">PM Project 01</h3>
+            <p class="project-desc">Project information pending confirmation.</p>
+          </div>
+          <div class="project-tags"><span class="project-tag">Content Required</span><span class="project-tag">PM Ventures</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <div>
+            <div class="project-meta"><span class="project-cat">Project</span><span class="project-year">—</span></div>
+            <h3 class="project-title">PM Project 02</h3>
+            <p class="project-desc">Project information pending confirmation.</p>
+          </div>
+          <div class="project-tags"><span class="project-tag">Content Required</span><span class="project-tag">PM Ventures</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <div>
+            <div class="project-meta"><span class="project-cat">Project</span><span class="project-year">—</span></div>
+            <h3 class="project-title">PM Project 03</h3>
+            <p class="project-desc">Project information pending confirmation.</p>
+          </div>
+          <div class="project-tags"><span class="project-tag">Content Required</span><span class="project-tag">PM Ventures</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <div>
+            <div class="project-meta"><span class="project-cat">Project</span><span class="project-year">—</span></div>
+            <h3 class="project-title">PM Project 04</h3>
+            <p class="project-desc">Project information pending confirmation.</p>
+          </div>
+          <div class="project-tags"><span class="project-tag">Content Required</span><span class="project-tag">PM Ventures</span></div>
+        </article>
+        <article class="project-card">
+          <div class="project-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <div>
+            <div class="project-meta"><span class="project-cat">Project</span><span class="project-year">â€”</span></div>
+            <h3 class="project-title">PM Project 05</h3>
+            <p class="project-desc">Project information pending confirmation.</p>
+          </div>
+          <div class="project-tags"><span class="project-tag">Content Required</span><span class="project-tag">PM Ventures</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL FEATURE -->
+  <section class="pm-visual-feature" aria-labelledby="pm-visual-feature-title">
+    <video
+      class="pm-visual-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-hidden="true"
+    >
+      <source src="https://cdn.horizonx.so/aureon-smart-ring-motion/aureon-smart-ring-motion-thumb-v1.mp4" type="video/mp4">
+    </video>
+    <div class="pm-visual-feature-content">
+      <h2 class="pm-visual-feature-title" id="pm-visual-feature-title">A New Perspective on Product and Venture</h2>
+      <p class="pm-visual-feature-copy">PM Ventures Institute content will be added here once the final institute-specific messaging is confirmed.</p>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="section" id="audience">
+    <div class="shell">
+      <div class="section-eyebrow">Who This Is For</div>
+      <h2 class="section-h2">Built around the people <br>PM Ventures is here to serve.</h2>
+      <div class="audience-list">
+        <div class="audience-row">
+          <span class="audience-num">01</span>
+          <div><div class="audience-title">Audience Group 01</div><div class="audience-desc">Audience definition pending confirmation.</div></div>
+          <div class="audience-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+        <div class="audience-row">
+          <span class="audience-num">02</span>
+          <div><div class="audience-title">Audience Group 02</div><div class="audience-desc">Audience definition pending confirmation.</div></div>
+          <div class="audience-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+        <div class="audience-row">
+          <span class="audience-num">03</span>
+          <div><div class="audience-title">Audience Group 03</div><div class="audience-desc">Audience definition pending confirmation.</div></div>
+          <div class="audience-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+        <div class="audience-row">
+          <span class="audience-num">04</span>
+          <div><div class="audience-title">Audience Group 04</div><div class="audience-desc">Audience definition pending confirmation.</div></div>
+          <div class="audience-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="section" id="journey">
+    <div class="shell">
+      <div class="section-eyebrow">Journey</div>
+      <h2 class="section-h2">PM Ventures Journey</h2>
+      <p style="font-size:1.0625rem;color:var(--muted);max-width:40rem;margin-bottom:0">Content Required — PM Ventures history and verified milestones pending confirmation.</p>
+      <div class="journey-grid">
+        <div class="journey-card"><h3>Origin</h3><p>Pending confirmation</p></div>
+        <div class="journey-card"><h3>Development</h3><p>Pending confirmation</p></div>
+        <div class="journey-card"><h3>Milestones</h3><p>Pending confirmation</p></div>
+        <div class="journey-card"><h3>Current Direction</h3><p>Pending confirmation</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTURES INSTITUTE NETWORK -->
+  <section class="section institute-network" id="network" aria-labelledby="institute-network-title">
+    <div class="shell">
+      <div class="institute-network-header">
+        <div>
+          <div class="section-eyebrow">Ventures Institute Network</div>
+          <h2 class="section-h2" id="institute-network-title">Explore the wider Ventures Institute ecosystem</h2>
+        </div>
+        <p class="institute-network-copy">A growing network of specialised institutes within FloLabs Innovations Group.</p>
+      </div>
+    </div>
+    <div class="institute-network-gallery" aria-label="Ventures Institute Network">
+      <div class="institute-carousel-track">
+        <div class="institute-carousel-group">
+          <article class="institute-card institute-card-current">
+            <img src="./Assets/PM-Ventures.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>PM Ventures Institute</h3>
+              <span class="institute-current-pill">Current</span>
+            </div>
+          </article>
+          <a class="institute-card institute-card-legal" href="https://www.legalethicsventuresinstitute.com/" target="_blank" rel="noopener noreferrer">
+            <img src="./Assets/Legal & Ethics.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20Legal%20%26%20Ethics%20Ventures%20Institute.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>Legal &amp; Ethics Ventures Institute</h3>
+            </div>
+          </a>
+          <a class="institute-card institute-card-space" href="https://www.spaceventuresinstitute.com/" target="_blank" rel="noopener noreferrer">
+            <img src="./Assets/Space-ventures.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20Space%20Ventures%20Institute.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>Space Ventures Institute</h3>
+            </div>
+          </a>
+        </div>
+        <div class="institute-carousel-group" aria-hidden="true">
+          <article class="institute-card institute-card-current">
+            <img src="./Assets/PM-Ventures.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>PM Ventures Institute</h3>
+              <span class="institute-current-pill">Current</span>
+            </div>
+          </article>
+          <a class="institute-card institute-card-legal" href="https://www.legalethicsventuresinstitute.com/" target="_blank" rel="noopener noreferrer" tabindex="-1">
+            <img src="./Assets/Legal & Ethics.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20Legal%20%26%20Ethics%20Ventures%20Institute.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>Legal &amp; Ethics Ventures Institute</h3>
+            </div>
+          </a>
+          <a class="institute-card institute-card-space" href="https://www.spaceventuresinstitute.com/" target="_blank" rel="noopener noreferrer" tabindex="-1">
+            <img src="./Assets/Space-ventures.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+            <div class="institute-card-shade"></div>
+            <div class="institute-card-action" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </div>
+            <div class="institute-card-copy">
+              <img class="institute-card-icon" src="Assets/icon/FloLabs_logo%20Space%20Ventures%20Institute.svg" alt="" aria-hidden="true" loading="lazy">
+              <h3>Space Ventures Institute</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- INTERNSHIPS CTA -->
+  <section class="internships-cta" id="internships">
+    <div class="shell">
+      <h2>Looking for internship opportunities?</h2>
+      <p>Explore current internship opportunities through FloLabs International.</p>
+      <a class="btn-primary" id="ctaInternships" href="#" data-external-destination="pending" style="background:var(--ink);color:#fff">Explore Internships</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="pm-footer" aria-labelledby="pm-footer-title">
+  <div class="shell pm-footer-shell">
+    <div class="pm-footer-cta">
+      <div class="pm-footer-cta-copy">
+        <p class="pm-footer-eyebrow">PM Ventures Institute</p>
+        <h2 id="pm-footer-title">Where product management<br>meets venture thinking.</h2>
+      </div>
+      <a class="pm-footer-main-cta" href="https://www.flolabs.international/internships" target="_blank" rel="noopener noreferrer">
+        <span>Explore Internships</span>
+        <span class="pm-footer-cta-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="pm-footer-newsletter" aria-labelledby="pm-footer-newsletter-title">
+      <div>
+        <p class="pm-footer-section-label">Stay connected</p>
+        <h3 id="pm-footer-newsletter-title">Follow what FloLabs is building next.</h3>
+        <p>Updates from FloLabs Innovations Group, its institutes, projects and ventures.</p>
+      </div>
+    </div>
+    <div class="pm-footer-grid">
+      <div class="pm-footer-brand-col">
+        <a class="pm-footer-brand" href="#home" aria-label="PM Ventures Institute home">
+          <span class="pm-footer-brand-mark">
+            <img src="assets/icon/FloLabs_logo%20PM%20Ventures%20Institute%20V1.svg" alt="PM Ventures Institute" width="30" height="30">
+            <span>PM Ventures Institute</span>
+          </span>
+          <small>by FloLabs Innovations Group</small>
+        </a>
+        <p>PM Ventures Institute brings product management and venture thinking together within the FloLabs Ventures Institute family.</p>
+        <div class="pm-footer-brand-newsletter" aria-labelledby="pm-footer-brand-newsletter-title">
+          <h3 id="pm-footer-brand-newsletter-title" style="margin-top: 40px;">Newsletter</h3>
+          <p>Receive the newest PM Ventures updates at:</p>
+          <form class="pm-footer-brand-newsletter-form">
+            <label class="sr-only" for="pm-footer-brand-email">Email address for newsletter</label>
+            <input id="pm-footer-brand-email" name="email" type="email" placeholder="Enter your email address" autocomplete="email" required>
+            <button type="submit" aria-label="Send newsletter email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 2 11 13"/>
+                <path d="m22 2-7 20-4-9-9-4 20-7Z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <nav class="pm-footer-socials" aria-label="FloLabs social channels" style="margin-bottom: 190px;">
+          <a href="https://www.youtube.com/@FloLabsInternational" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.9 12l-6.3 3.6Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/flolabs-innovation" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.68H9.34V8.98h3.42v1.57h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.76C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.76 24h20.47c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/flolabsinnovations" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.8-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/flolabsinnovations" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.6 2h8.8A5.6 5.6 0 0 1 22 7.6v8.8a5.6 5.6 0 0 1-5.6 5.6H7.6A5.6 5.6 0 0 1 2 16.4V7.6A5.6 5.6 0 0 1 7.6 2Zm0 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          </a>
+          <a href="https://www.reddit.com/user/flolabs" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 11.78a2.72 2.72 0 0 0-4.61-1.95 13.28 13.28 0 0 0-6.53-2.04l1.11-5.22 3.63.77a1.91 1.91 0 1 0 .23-1.08l-4.2-.89a.56.56 0 0 0-.66.43L11.7 7.78a13.36 13.36 0 0 0-7.08 2.05A2.72 2.72 0 1 0 1.63 14.3a5.18 5.18 0 0 0-.06.78c0 4.03 4.67 7.3 10.43 7.3s10.43-3.27 10.43-7.3c0-.26-.02-.52-.06-.77A2.72 2.72 0 0 0 24 11.78ZM6.71 14.17a1.64 1.64 0 1 1 3.28 0 1.64 1.64 0 0 1-3.28 0Zm9.2 4.55c-1.14 1.14-3.31 1.22-3.91 1.22-.6 0-2.77-.08-3.91-1.22a.56.56 0 0 1 .79-.79c.72.72 2.23.89 3.12.89.89 0 2.4-.17 3.12-.89a.56.56 0 1 1 .79.79Zm-.26-2.91a1.64 1.64 0 1 1 0-3.28 1.64 1.64 0 0 1 0 3.28Z"/></svg>
+          </a>
+        </nav>
+      </div>
+
+      <nav class="pm-footer-col" aria-label="PM Ventures navigation">
+        <h3>Navigation</h3>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="https://www.flolabs.international/internships" target="_blank" rel="noopener noreferrer">Internships</a>
+      </nav>
+
+      <nav class="pm-footer-col pm-footer-projects" aria-label="FloLabs ecosystem projects">
+        <h3>Projects</h3>
+        <a href="https://www.athleticperformanceintelligence.com" target="_blank" rel="noopener noreferrer">Athletic Performance Intelligence</a>
+        <a href="https://www.caipo.ai" target="_blank" rel="noopener noreferrer">CAIPO</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Connecting the Dots</a>
+        <a href="https://cosmosintelligence.org" target="_blank" rel="noopener noreferrer">Cosmos Intelligence</a>
+        <a href="https://www.flomadtravel.com" target="_blank" rel="noopener noreferrer">Flo Travel</a>
+        <a href="https://www.flolabsinnovations.com" target="_blank" rel="noopener noreferrer">FloLabs Innovations Group</a>
+        <a href="https://www.flolabs.international" target="_blank" rel="noopener noreferrer">FloLabs International</a>
+        <a href="https://www.flostudios.ai" target="_blank" rel="noopener noreferrer">FloStudios</a>
+        <a href="https://hephaestus.international" target="_blank" rel="noopener noreferrer">Hepheastus International</a>
+        <a href="https://www.bootcampuniversity.org" target="_blank" rel="noopener noreferrer">Innovation Bootcamp University</a>
+        <a href="https://www.moodchanger.ai" target="_blank" rel="noopener noreferrer">MoodChanger</a>
+        <a href="https://www.legalethicsventuresinstitute.com" target="_blank" rel="noopener noreferrer">Legal &amp; Ethics Ventures Institute</a>
+        <a href="https://www.robocollective.ai" target="_blank" rel="noopener noreferrer">RoboCollective</a>
+        <a href="https://www.spaceventuresinstitute.com" target="_blank" rel="noopener noreferrer">Space Ventures Institute</a>
+        <a href="https://tarrl.org" target="_blank" rel="noopener noreferrer">TARRL</a>
+      </nav>
+
+      <nav class="pm-footer-col" aria-label="FloLabs company links">
+        <h3>Company</h3>
+        <a href="https://www.flolabs.international/internships" target="_blank" rel="noopener noreferrer">Careers</a>
+        <a href="mailto:support@flolabs.ai">Contact Us</a>
+        <a href="https://flolabsrd.notion.site/merch-background" target="_blank" rel="noopener noreferrer">Merch</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+        <a href="/privacy">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="pm-footer-bottom">
+      <p>&copy; <span id="year"></span> FloLabs Innovations Group. All rights reserved.</p>
+      <p>Live Long and Prosper</p>
+      <nav aria-label="Footer legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+</main>
+
+
+
+
+<script type="importmap">
+{"imports":{"lenis":"https://unpkg.com/lenis@1.3.23/dist/lenis.mjs"}}
+</script>
+<script type="module">
+import Lenis from 'lenis';
+
+const INTERNSHIPS_URL = 'https://www.flolabs.international/internships';
+
+/* ---------- Adaptive grid ---------- */
+function applyAdaptiveGrid(){
+  const FONT_BASE=16, baseWidth=1920, coef=0.6666;
+  const w=window.innerWidth;
+  const widthReduction=((baseWidth-w)/baseWidth)*100;
+  const size=FONT_BASE-(FONT_BASE*(widthReduction*coef))/100;
+  if(size>FONT_BASE) document.documentElement.style.fontSize=size+'px';
+  else document.documentElement.style.removeProperty('font-size');
+}
+applyAdaptiveGrid();
+addEventListener('resize',applyAdaptiveGrid);
+
+/* ---------- Theme ---------- */
+const root=document.documentElement;
+const stored=localStorage.getItem('pm-theme');
+const prefersDark=matchMedia('(prefers-color-scheme:dark)').matches;
+if(stored) root.setAttribute('data-theme',stored);
+else if(prefersDark) root.setAttribute('data-theme','dark');
+const themeBtn=document.getElementById('themeBtn');
+function syncThemeToggle(){
+  themeBtn.setAttribute('aria-label',root.getAttribute('data-theme')==='dark'?'Switch to light mode':'Switch to dark mode');
+}
+syncThemeToggle();
+themeBtn.addEventListener('click',()=>{
+  const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',next);
+  localStorage.setItem('pm-theme',next);
+  syncThemeToggle();
+});
+
+/* ---------- Header scroll state ---------- */
+const header=document.getElementById('header');
+function updateHeaderScrollState(){
+  header.classList.toggle('scrolled',window.scrollY>0);
+}
+updateHeaderScrollState();
+addEventListener('scroll',updateHeaderScrollState,{passive:true});
+
+/* ---------- Lenis + scroll lock ---------- */
+window.scrollTo(0,0);
+updateHeaderScrollState();
+const lenis=new Lenis({smoothWheel:true});
+function raf(t){lenis.raf(t);requestAnimationFrame(raf)}
+requestAnimationFrame(raf);
+
+let scrollEnabled=true;
+function stopScroll(){
+  scrollEnabled=false;
+  lenis.stop();
+  document.documentElement.style.position='relative';
+  document.documentElement.style.overflow='hidden';
+  document.documentElement.style.height='100%';
+  document.body.style.overflow='hidden';
+}
+function startScroll(){
+  scrollEnabled=true;
+  lenis.start();
+  document.documentElement.style.removeProperty('position');
+  document.documentElement.style.removeProperty('overflow');
+  document.documentElement.style.removeProperty('height');
+  document.body.style.removeProperty('overflow');
+}
+stopScroll();
+
+function scrollToId(id){
+  const el=document.getElementById(id);
+  if(!el) return;
+  stopScroll();
+  setTimeout(()=>{
+    const top=el.getBoundingClientRect().top+window.pageYOffset;
+    window.scrollTo({top,behavior:'smooth'});
+    setTimeout(startScroll,100);
+  },50);
+}
+
+/* ---------- Clock ---------- */
+function updateClock(){
+  const now=new Date();
+  let h=now.getHours();
+  const m=String(now.getMinutes()).padStart(2,'0');
+  const ampm=h>=12?'pm':'am';
+  h=h%12||12;
+  const timeStr=`${h}:${m}${ampm}`;
+  const dateStr=now.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('clockTime').textContent=timeStr;
+  document.getElementById('clockDate').textContent=dateStr;
+}
+updateClock();
+setInterval(updateClock,1000);
+document.getElementById('year').textContent=new Date().getFullYear();
+
+/* ---------- Loader ---------- */
+const loader=document.getElementById('loader');
+const loaderFill=document.getElementById('loaderFill');
+const loaderCount=document.getElementById('loaderCount');
+const FILL_MS=1300;
+let start=null;
+function easeInOutCubic(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+function tickLoader(ts){
+  if(!start) start=ts;
+  const p=Math.min((ts-start)/FILL_MS,1);
+  const val=Math.round(easeInOutCubic(p)*100);
+  loaderFill.style.width=val+'%';
+  loaderCount.textContent=String(val).padStart(3,'0');
+  if(p<1) requestAnimationFrame(tickLoader);
+  else{
+    loader.classList.add('exit');
+    setTimeout(()=>{
+      loader.remove();
+      document.getElementById('header').classList.add('ready');
+      document.getElementById('home').classList.add('ready');
+      startScroll();
+      initReveals();
+    },700);
+  }
+}
+requestAnimationFrame(tickLoader);
+
+/* ---------- Liquid Reveal ---------- */
+(function(){
+  const container=document.getElementById('liquidReveal');
+  const canvas=document.getElementById('heroCanvas');
+  const ctx=canvas.getContext('2d');
+  const beforeSrc='assets/hero/after.jpg';
+  const afterSrc='assets/hero/before.jpg';
+  const brushRadius=143;
+  const decay=0.016;
+  const dpr=Math.min(devicePixelRatio||1,2);
+  let points=[],last=null,idle=0,drawing=false;
+  let cover=null,brush=null,radius=0,W=0,H=0;
+
+  const imgAfter=new Image();
+  imgAfter.crossOrigin='anonymous';
+  imgAfter.src=afterSrc;
+
+  function resize(){
+    const rect=container.getBoundingClientRect();
+    W=rect.width;H=rect.height;
+    canvas.width=W*dpr;canvas.height=H*dpr;
+    canvas.style.width=W+'px';canvas.style.height=H+'px';
+    radius=brushRadius*dpr;
+    if(imgAfter.complete) buildCover();
+  }
+  function buildCover(){
+    cover=document.createElement('canvas');
+    cover.width=canvas.width;cover.height=canvas.height;
+    const cctx=cover.getContext('2d');
+    const iw=imgAfter.naturalWidth,ih=imgAfter.naturalHeight;
+    const scale=Math.max(canvas.width/iw,canvas.height/ih);
+    const sw=iw*scale,sh=ih*scale;
+    cctx.drawImage(imgAfter,(canvas.width-sw)/2,(canvas.height-sh)/2,sw,sh);
+    const diam=Math.ceil(radius*2);
+    brush=document.createElement('canvas');
+    brush.width=diam;brush.height=diam;
+  }
+  imgAfter.onload=()=>{resize();buildCover()};
+  new ResizeObserver(resize).observe(container);
+  resize();
+
+  function stamp(x,y){
+    if(!brush||!cover) return;
+    const bctx=brush.getContext('2d');
+    const diam=brush.width;
+    bctx.clearRect(0,0,diam,diam);
+    const g=bctx.createRadialGradient(diam/2,diam/2,0,diam/2,diam/2,diam/2);
+    g.addColorStop(0,'rgba(255,255,255,1)');
+    g.addColorStop(0.55,'rgba(255,255,255,0.82)');
+    g.addColorStop(1,'rgba(255,255,255,0)');
+    bctx.globalCompositeOperation='source-over';
+    bctx.fillStyle=g;
+    bctx.fillRect(0,0,diam,diam);
+    bctx.globalCompositeOperation='source-in';
+    bctx.drawImage(cover,x-diam/2,y-diam/2,diam,diam,0,0,diam,diam);
+    ctx.globalCompositeOperation='source-over';
+    ctx.drawImage(brush,x-diam/2,y-diam/2);
+  }
+
+  function frame(){
+    if(points.length){idle=0;drawing=true}
+    else{idle++;drawing=false}
+    if(idle>120){ctx.clearRect(0,0,canvas.width,canvas.height);requestAnimationFrame(frame);return}
+    const fade=drawing?decay:Math.min(decay+idle*0.004,0.5);
+    ctx.globalCompositeOperation='destination-out';
+    ctx.fillStyle=`rgba(0,0,0,${fade})`;
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    if(drawing){
+      for(const p of points) stamp(p.x,p.y);
+      points=[];
+    }
+    requestAnimationFrame(frame);
+  }
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches) requestAnimationFrame(frame);
+
+  addEventListener('pointermove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const x=(e.clientX-rect.left)*dpr;
+    const y=(e.clientY-rect.top)*dpr;
+    if(x<-radius||y<-radius||x>canvas.width+radius||y>canvas.height+radius){last=null;return}
+    if(last){
+      const dx=x-last.x,dy=y-last.y;
+      const dist=Math.hypot(dx,dy);
+      const step=Math.max(radius*0.3,1);
+      const n=Math.min(Math.ceil(dist/step),60);
+      for(let i=1;i<=n;i++){
+        const t=i/n;
+        points.push({x:last.x+dx*t,y:last.y+dy*t});
+      }
+    }else points.push({x,y});
+    last={x,y};
+  });
+})();
+
+/* ---------- Hero card carousel ---------- */
+const cardData=[
+  {cap:'PM Ventures',title:'Product management meets venture thinking.'},
+  {cap:'Projects',title:'Explore what PM Ventures is building.'},
+  {cap:'Journey',title:'Follow the institute\'s evolving direction.'}
+];
+let cardIdx=0;
+function renderCard(){
+  document.getElementById('cardCap').textContent=cardData[cardIdx].cap;
+  document.getElementById('cardTitle').textContent=cardData[cardIdx].title;
+  document.querySelectorAll('#cardDots span').forEach((s,i)=>s.classList.toggle('active',i===cardIdx));
+}
+document.getElementById('cardPrev').addEventListener('click',()=>{cardIdx=(cardIdx+2)%3;renderCard()});
+document.getElementById('cardNext').addEventListener('click',()=>{cardIdx=(cardIdx+1)%3;renderCard()});
+
+/* ---------- Nav menu ---------- */
+const navMenu=document.getElementById('navMenu');
+const menuBtn=document.getElementById('menuBtn');
+const menuItems=[...navMenu.querySelectorAll('.navmenu-item')];
+function positionMenu(){
+  const rect=menuBtn.getBoundingClientRect();
+  const margin=16;
+  const right=Math.max(margin,window.innerWidth-rect.right);
+  navMenu.style.setProperty('--navmenu-top',`${rect.bottom+10}px`);
+  navMenu.style.setProperty('--navmenu-right',`${right}px`);
+}
+function openMenu(){
+  positionMenu();
+  navMenu.classList.add('open');
+  navMenu.setAttribute('aria-hidden','false');
+  menuBtn.setAttribute('aria-expanded','true');
+  menuBtn.setAttribute('aria-label','Close menu');
+  requestAnimationFrame(()=>menuItems[0]?.focus());
+}
+function closeMenu(){
+  if(!navMenu.classList.contains('open')) return;
+  navMenu.classList.remove('open');
+  navMenu.setAttribute('aria-hidden','true');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.setAttribute('aria-label','Open menu');
+}
+function toggleMenu(){
+  if(navMenu.classList.contains('open')) closeMenu();
+  else openMenu();
+}
+menuBtn.addEventListener('click',e=>{
+  e.stopPropagation();
+  toggleMenu();
+});
+navMenu.addEventListener('click',e=>e.stopPropagation());
+document.addEventListener('pointerdown',e=>{
+  if(navMenu.classList.contains('open') && !navMenu.contains(e.target) && !menuBtn.contains(e.target)) closeMenu();
+});
+addEventListener('resize',()=>{if(navMenu.classList.contains('open')) positionMenu()});
+addEventListener('scroll',()=>{if(navMenu.classList.contains('open')) positionMenu()},{passive:true});
+navMenu.querySelectorAll('[data-scroll]').forEach(btn=>{
+  btn.addEventListener('click',e=>{
+    e.preventDefault();
+    closeMenu();
+    scrollToId(btn.dataset.scroll);
+  });
+});
+
+/* ---------- Modal ---------- */
+const modal=document.getElementById('modal');
+function openModal(){if(modal){modal.classList.add('open');stopScroll()}}
+function closeModal(){if(modal){modal.classList.remove('open');startScroll()}}
+document.getElementById('modalClose')?.addEventListener('click',closeModal);
+document.getElementById('modalDismiss')?.addEventListener('click',closeModal);
+modal?.addEventListener('click',e=>{if(e.target===modal) closeModal()});
+addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    if(modal?.classList.contains('open')) closeModal();
+    else if(navMenu.classList.contains('open')){
+      closeMenu();
+      menuBtn.focus();
+    }
+  }
+});
+navMenu.addEventListener('keydown',e=>{
+  if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key)) return;
+  e.preventDefault();
+  const current=Math.max(0,menuItems.indexOf(document.activeElement));
+  let next=current;
+  if(e.key==='ArrowDown') next=(current+1)%menuItems.length;
+  if(e.key==='ArrowUp') next=(current-1+menuItems.length)%menuItems.length;
+  if(e.key==='Home') next=0;
+  if(e.key==='End') next=menuItems.length-1;
+  menuItems[next]?.focus();
+});
+
+/* ---------- External internships ---------- */
+function bindInternships(el){
+  if(!el) return;
+  el.addEventListener('click',e=>{
+    e.preventDefault();
+    if(INTERNSHIPS_URL) window.open(INTERNSHIPS_URL,'_blank','noopener');
+    else openModal();
+  });
+}
+['headerInternships','heroInternships','ctaInternships','footerInternships','menuInternships','modalInternships'].forEach(id=>bindInternships(document.getElementById(id)));
+
+/* ---------- Scroll triggers ---------- */
+document.querySelectorAll('[data-scroll]').forEach(el=>{
+  if(navMenu.contains(el)) return;
+  el.addEventListener('click',()=>scrollToId(el.dataset.scroll));
+});
+document.getElementById('brandBtn').addEventListener('click',()=>scrollToId('home'));
+
+/* ---------- Word reveal (About) ---------- */
+function initReveals(){
+  const statement=document.getElementById('aboutStatement');
+  if(statement && !statement.dataset.revealed){
+    const html=statement.innerHTML;
+    const parts=html.split(/(<em>.*?<\/em>)/g);
+    let out='';
+    parts.forEach(part=>{
+      if(part.startsWith('<em>')){
+        const inner=part.replace(/<\/?em>/g,'');
+        out+='<em>'+inner.split(/\s+/).map((w,i)=>`<span class="word" style="transition-delay:${i*35}ms">${w}</span>`).join(' ')+'</em>';
+      }else{
+        out+=part.split(/\s+/).filter(Boolean).map((w,i)=>`<span class="word" style="transition-delay:${i*35}ms">${w}</span>`).join(' ');
+      }
+    });
+    statement.innerHTML=out;
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          statement.querySelectorAll('.word').forEach(w=>{w.style.opacity='1';w.style.transform='translateY(0)'});
+          statement.dataset.revealed='1';
+          io.disconnect();
+        }
+      });
+    },{threshold:.3});
+    io.observe(statement);
+  }
+
+  /* Framework count-up */
+  const cells=document.querySelectorAll('.framework-value');
+  const fio=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        cells.forEach(cell=>{
+          const target=+cell.dataset.target;
+          let n=0;
+          const step=()=>{
+            n++;
+            cell.textContent=String(n).padStart(2,'0');
+            if(n<target) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        });
+        fio.disconnect();
+      }
+    });
+  },{threshold:.4});
+  const fw=document.getElementById('framework');
+  if(fw) fio.observe(fw);
+}
+</script>
+</body>
+</html>
